@@ -1,0 +1,96 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "c46174daef540bb83771847aa6346b0e",
+    "entities": [
+      {
+        "tableName": "ListeServices",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`Listid` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "Listid",
+            "columnName": "Listid",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "Listid"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Services",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `Libelle` TEXT NOT NULL, `Description` TEXT NOT NULL, `Etat` TEXT NOT NULL, `Prix` REAL NOT NULL, `ImageUrl` TEXT NOT NULL, `Type` TEXT NOT NULL, `Note` REAL NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Libelle",
+            "columnName": "Libelle",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Etat",
+            "columnName": "Etat",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Prix",
+            "columnName": "Prix",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ImageUrl",
+            "columnName": "ImageUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Type",
+            "columnName": "Type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Note",
+            "columnName": "Note",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c46174daef540bb83771847aa6346b0e')"
+    ]
+  }
+}

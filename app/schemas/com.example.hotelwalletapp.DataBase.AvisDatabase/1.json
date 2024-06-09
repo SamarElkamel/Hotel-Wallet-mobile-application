@@ -1,0 +1,132 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "bc66efa718f1d219a99e55bbaa68178e",
+    "entities": [
+      {
+        "tableName": "Avis",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `Titre` TEXT NOT NULL, `Description` TEXT NOT NULL, `Date` TEXT NOT NULL, `Note` REAL NOT NULL, `serviceId` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Titre",
+            "columnName": "Titre",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Date",
+            "columnName": "Date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Note",
+            "columnName": "Note",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "serviceId",
+            "columnName": "serviceId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Services",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `Libelle` TEXT NOT NULL, `Description` TEXT NOT NULL, `Etat` TEXT NOT NULL, `Prix` REAL NOT NULL, `ImageUrl` TEXT NOT NULL, `Typeserv` TEXT NOT NULL, `Note` REAL NOT NULL, `avis` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Libelle",
+            "columnName": "Libelle",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Etat",
+            "columnName": "Etat",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Prix",
+            "columnName": "Prix",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ImageUrl",
+            "columnName": "ImageUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Typeserv",
+            "columnName": "Typeserv",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Note",
+            "columnName": "Note",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "avis",
+            "columnName": "avis",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'bc66efa718f1d219a99e55bbaa68178e')"
+    ]
+  }
+}

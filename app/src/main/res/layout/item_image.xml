@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_centerInParent="true"
+    android:gravity="center">
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="40dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="true"
+            card_view:cardCornerRAdius="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="240dp">
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="23dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_marginTop="2dp"
+                    android:textSize="13sp"
+                    android:textStyle="normal"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:textColor="#5C5A5A"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_marginTop="2dp"
+                    android:textSize="13sp"
+                    android:textStyle="normal"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:textColor="#5C5A5A"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/but"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:text="My Expenses"
+                        app:elevation="0dp"
+                        android:textColor="@color/secondary"
+                         />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
